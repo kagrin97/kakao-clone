@@ -1,0 +1,57 @@
+.Welcome-header {
+  margin: 90px 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} /*텍스트 정렬, flex를 교차축으로, 가운데 정렬*/
+
+.Welcome-header__title {
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+
+.Welcome-header__text {
+  width: 60%;
+  opacity: 0.7; /*투명도*/
+}
+
+#Login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+}
+
+#Login-form input {
+  border: none;
+  padding: 15px 0px;
+  font-size: 18px;
+  margin-bottom: 25px;
+} /*경계선 지우기*/
+
+#Login-form input:not([type="submit"]) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  transition: border-color 0.3s ease-in-out;
+} /*input값중 submit제외한 input만 적용*/
+
+#Login-form input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+#Login-form input:focus {
+  border-color: var(--yellow);
+} /*변수파일 불러오기(카카오 노란색)*/
+
+#Login-form input[type="submit"] {
+  background-color: var(--yellow);
+  cursor: pointer;
+  padding: 20px 0px;
+  border-radius: 5px;
+} /*submit만 적용, 노란색 적용, 마우스를 올렸을때 포인터 모양으로 변경*/
+
+#Login-form a {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  font-size: 13px;
+} /*링크text 정렬, 컬러를 부모한테 상속*/
