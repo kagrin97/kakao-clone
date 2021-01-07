@@ -1,13 +1,10 @@
 <!DOCTYPE html>
-<html lang="kr">
+<html lang="en">
   <head>
     <link rel="stylesheet" href="css/styles.css" />
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=https://github.com/kagrin97/kakao-clone, initial-scale=1.0"
-    />
-    <title>친구-kakao</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Friends - Kokoa Clone</title>
   </head>
   <body>
     <div class="status-bar">
@@ -19,90 +16,62 @@
         <span>18:43</span>
       </div>
       <div class="status-bar__column">
-        <span>11%</span>
-        <i class="fas fa-battery-quarter"></i>
+        <span>110%</span>
+        <i class="fas fa-battery-full fa-lg"></i>
         <i class="fas fa-bolt"></i>
       </div>
     </div>
+
     <header class="screen-header">
-      <h1 class="screen-header__title">친구</h1>
+      <h1 class="screen-header__title">Friends</h1>
       <div class="screen-header__icons">
         <span><i class="fas fa-search fa-lg"></i></span>
         <span><i class="fas fa-music fa-lg"></i></span>
         <span><i class="fas fa-cog fa-lg"></i></span>
       </div>
     </header>
+
     <a id="friends-display-link">
-      <i class="fas fa-info-circle"></i> 친구이름 표시
+      <i class="fas fa-info-circle"></i> Friends' Names Display
       <i class="fas fa-chevron-right fa-xs"></i>
     </a>
+
     <main class="friends-screen">
       <div class="user-component">
         <div class="user-component__column">
           <img
-            src="https://image5jvqbd.fmkorea.com/files/attach/new/20200527/3842645/7175392/2922358291/8d8884ba52a312369dccf954d581c361.jpg"
+            src="https://avatars3.githubusercontent.com/u/3612017"
             class="user-component__avatar user-component__avatar--xl"
           />
-          <div class="user_component__text">
-            <h4 class="user-component__title">강민규</h4>
-            <h6 class="user-component__subtitle">신내동 살쾡이</h6>
+          <div class="user-component__text">
+            <h4 class="user-component__title">Nicolas</h4>
+            <!-- <h6 class="user-component__subtitle">this text whatever</h6> -->
           </div>
         </div>
         <div class="user-component__column"></div>
       </div>
       <div class="friends-screen__channel">
         <div class="friends-screen__channel-header">
-          <span>채널 2</span>
+          <span>Channel</span>
           <i class="fas fa-chevron-up fa-xs"></i>
         </div>
         <div class="user-component">
           <div class="user-component__column">
             <img
-              src="https://i.pinimg.com/736x/c0/a2/24/c0a224fd1d54c9998cd691ed9bce1d6f.jpg"
+              src="https://avatars3.githubusercontent.com/u/3612017"
               class="user-component__avatar user-component__avatar--sm"
             />
-            <div class="user_component__text">
+            <div class="user-component__text">
               <h4 class="user-component__title user-component__title--not-bold">
-                고양이 대출
+                Channel
               </h4>
             </div>
           </div>
           <div class="user-component__column">
-            <span>2 <i class="fas fa-chevron-right fa-xs"></i></span>
-          </div>
-        </div>
-      </div>
-      <div class="user-component">
-        <div class="user-component__column-second">
-          <img
-            src="https://cdn.cashfeed.co.kr/attachments/e14257f563.jpg"
-            class="user-component__avatar user-component__avatar--sm"
-          />
-          <div class="user_component__text">
-            <h4 class="user-component__title user-component__title--not-bold">
-              상봉동 리트리버 모임
-            </h4>
-          </div>
-        </div>
-        <div class="user-component__column">
-          <span>4 <i class="fas fa-chevron-right fa-xs"></i></span>
-        </div>
-      </div>
-      <div class="friends-screen__channel-header-second">
-        <span>친구 1</span>
-        <i class="fas fa-chevron-up fa-xs"></i>
-      </div>
-      <div class="user-component">
-        <div class="user-component__column-third">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR10Tg2K4dn-wE62InikX6Yqc2M6-Y9CHxxFw&usqp=CAU"
-            class="user-component__avatar user-component__avatar--sm"
-          />
-          <div class="user_component__text">
-            <h4 class="user-component__title user-component__title--not-bold">
-              누룽지 박
-            </h4>
-            <h6 class="user-component__subtitle">주인놈 맘에 안들어</h6>
+            <div>
+              <span>2</span>
+              <i class="fas fa-chevron-right fa-xs"></i>
+            </div>
           </div>
         </div>
       </div>
@@ -118,8 +87,8 @@
         <li class="nav__btn">
           <a class="nav__link" href="chats.html">
             <span class="nav__notification badge">1</span>
-            <i class="far fa-comment fa-2x"></i
-          ></a>
+            <i class="far fa-comment fa-2x"></i>
+          </a>
         </li>
         <li class="nav__btn">
           <a class="nav__link" href="find.html"
@@ -127,16 +96,22 @@
           ></a>
         </li>
         <li class="nav__btn">
-          <a class="nav__link" href="more.html">
-            <span class="nav__notification2"></span>
-            <i class="fas fa-ellipsis-h fa-2x"></i
+          <a class="nav__link" href="more.html"
+            ><i class="fas fa-ellipsis-h fa-2x"></i
           ></a>
         </li>
       </ul>
     </nav>
+    <div id="splash-screen">
+      <i class="fas fa-comment fa-2x"></i>
+    </div>
+
+    <div id="no-mobile">
+      <span>Your screen is too big ㅠㅠ</span>
+    </div>
 
     <script
-      src="https://kit.fontawesome.com/242fe179a9.js"
+      src="https://kit.fontawesome.com/6478f529f2.js"
       crossorigin="anonymous"
     ></script>
   </body>

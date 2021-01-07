@@ -1,53 +1,64 @@
 .nav {
-  background-color: #f9f9fa;
-  padding: 20px 50px;
-  border-top: 1px solid rgba(121, 119, 119, 0.301);
   position: fixed;
   bottom: 0;
-  box-sizing: border-box;
   width: 100%;
-} /* box-sizing: border-box은 화면이 짤리지 않게해줌*/
-
+  background-color: #f9f9fa;
+  padding: 20px 50px;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(121, 121, 121, 0.3);
+}
 .nav__list {
   display: flex;
   justify-content: space-between;
 }
 .nav__link {
   position: relative;
+  color: #2e363e;
+}
+
+@keyframes notificationAnimation {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: translateY(-10px) rotatey(360deg);
+  }
+  100% {
+    transform: none;
+  }
 }
 
 .nav__notification {
   position: absolute;
   left: 15px;
   bottom: 15px;
+  animation: notificationAnimation 2s ease-in-out infinite;
 }
 
-.nav__notification2 {
-  background-color: tomato;
-  width: 7px;
-  height: 7px;
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  left: 30px;
-  bottom: 31px;
+@keyframes appearBtonAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
 }
 
-.cog__notification {
-  background-color: tomato;
-  width: 5px;
-  height: 5px;
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  right: -8px;
-  bottom: 18px;
+.nav__btn {
+  transform: translateY(50px);
+  opacity: 0;
+  animation: appearBtonAnimation 0.3s ease-in-out forwards;
 }
 
-.search-icon {
-  margin-right: 20px;
+.nav__btn:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.nav__btn:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.nav__btn:last-child {
+  animation-delay: 0.7s;
 }

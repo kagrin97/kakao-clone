@@ -1,3 +1,3 @@
-# kakao-clone
+# Kokoa Clone 2020 Update
 
-kakao clone to make
+HTML & CSS are so much fun!
