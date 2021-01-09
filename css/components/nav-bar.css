@@ -2,7 +2,7 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #f9f9fa;
+  background-color: rgba(0, 0, 0, 0.4);
   padding: 20px 50px;
   box-sizing: border-box;
   border-top: 1px solid rgba(121, 121, 121, 0.3);
@@ -13,7 +13,7 @@
 }
 .nav__link {
   position: relative;
-  color: #2e363e;
+  color: white;
 }
 
 @keyframes notificationAnimation {
@@ -61,4 +61,62 @@
 
 .nav__btn:last-child {
   animation-delay: 0.7s;
+}
+
+@keyframes bounce-out-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  5% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  15% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  25% {
+    -webkit-transform: translateY(-38px);
+    transform: translateY(-38px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  38% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  52% {
+    -webkit-transform: translateY(-75px);
+    transform: translateY(-75px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  70% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(-800px);
+    transform: translateY(-800px);
+    opacity: 0;
+  }
+}
+
+.nav__btn:hover i {
+  will-change: transform;
+  animation: bounce-out-top 1.5s both;
 }

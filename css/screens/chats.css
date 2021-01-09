@@ -1,0 +1,55 @@
+@keyframes bounce-out-top {
+  0% {
+    color: #19dcea;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  15% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  30% {
+    color: #b22cff;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  45% {
+    -webkit-transform: translateY(-38px);
+    transform: translateY(-38px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  60% {
+    color: #ea2222;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  75% {
+    -webkit-transform: translateY(-75px);
+    transform: translateY(-75px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  87% {
+    color: #f5be10;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  100% {
+    color: #3bd80d;
+  }
+}
+
+.chats__frog i {
+  animation: bounce-out-top 2s linear infinite alternate both;
+}

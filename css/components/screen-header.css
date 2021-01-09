@@ -4,6 +4,7 @@
   align-items: center;
   padding: var(--horizontal-space);
   margin-bottom: 15px;
+  color: white;
 }
 
 .screen-header__title {
@@ -11,8 +12,27 @@
   font-weight: 600;
 }
 
+@keyframes color-change-5x {
+  0% {
+    color: #19dcea;
+  }
+  25% {
+    color: #b22cff;
+  }
+  50% {
+    color: #ea2222;
+  }
+  75% {
+    color: #f5be10;
+  }
+  100% {
+    color: #3bd80d;
+  }
+}
+
 .screen-header__icons span {
   margin-left: 25px;
+  animation: color-change-5x 2s linear infinite alternate both;
 }
 
 @keyframes rotateCog {
