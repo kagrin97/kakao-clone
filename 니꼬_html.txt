@@ -1,0 +1,73 @@
+니꼬 html 강의  
+https://developer.mozilla.org/ko/docs/Web/HTML/Element <-- html tag 정보를 보는 사이트 mdn 에서제공
+
+0. 기본설정
+
+!+엔터 를 치면 기본 설정을 자동으로 완성을 시켜줌
+
+1.<a></a> = 
+ 앵커라는 뜻으로 다른 사이트로 연결시켜주는 역할
+ 여기에 다른 옵션을 추가할수가 있는데 
+
+ <a href="http://google.com" target="_blank">go to google.com</a>
+
+ 여기서 href는 하이퍼링크 머시기로 해당 url로 이동시켜줌 그리고 target 블랭크는 이동시 새로운 탭에서 새로생성 됨을의미
+
+2. <img> 
+ 는 태그가 아니라서 열고 닫는 태그를 만들 필요가 없음 
+ <img
+   src="https://mblogthumb-phinf.pstatic.net/20130728_238/suni2park_137494.jpg?type=w2"
+ /> 
+
+ 이거와 같이 src 소스 주소 만 하면 이미지가 나옴 src 는 이미지 에서만 작동함
+
+ 그리고 폴더 내에 이미지 파일을 불러오고 싶으면 그 이미지 파일 주소를  src 에 넣어야함
+
+3. Beauty 라는 vsc 플로그인 으로 컨트롤+쉬프트+b 를 드래그후 클릭하면 자동 줄맞춤
+ 하지만 내장 프로그램으로 자동 줄맞춤은 쉬프트+알트+f 
+
+4. 간단 요약
+ 같은 폴더에 이미지가 있을 경우 이미지 이름.확장자
+
+ 다른 폴더일 경우 폴더/이미지.확장자 (경로 표기 법)
+
+ 모든 HTML 문서는 로 시작
+
+ HTML 문서는 HEAD(웹사이트의 환경 설정), BODY(사용자가 볼 수 있는 내용)로 구성됨
+
+ title = 제목 설정
+
+ 브라우저 화면상에 보여질 내용들은 body에 있어야 함.
+
+5. <meta>
+<meta name="description" content="this is my website." /> 
+ meta는 부가적인 정보라는 뜻 
+ <meta charset="utf-8" /> == 이옵션은 브라우저가 문자를 이해못할수도 있기때문에 해주느 필수 옵션 
+
+6. form 에서 input
+은 입력받는 것이라고 생각하면됨 
+input tag = 입력창 만드는 태그
+<input required placeholder="Password" type="password" /> <-- 예
+
+7. 시맨틱 태그
+body 안에 div 태그를 쓸경우 화면에서 분할의 시켜줘서 가독성이 좋아짐 예를 들어 인풋 박스가 양옆에 있어도
+div로 하나씩 묶어주면 따로따로 위아래로 출력됨 div와 같은 기능을 가진 <header, main, footer> 이 4가지는 기능이 다 
+똑같지만 프로그래머가 한눈에 알아보기 쉽게 나눠논 태그다 이런 태그를 시맨틱 태그라고한다
+<div, header, main, footer>
+<p> : 긴문장을 위한 택스트 태그, <span> : 짧은 문장을 위한 태그
+이런 태그들은 맨위 사이트에서 콘텐츠 구획에서 찾을수가 있다
+
+8. nav : 네비게이션 만들기
+
+nav>ul>li*4>a
+
+-><nav>
+        <ul>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+        </ul>
+    </nav>
+
+이런식으로 자동으로 네비게이션 html문법을 만들어줌

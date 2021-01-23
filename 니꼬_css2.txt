@@ -1,0 +1,133 @@
+니꼬 css part2 
+
+1. block -> inline 을 높이 너비를 적용 시키는 방법 (추천x)
+
+    display: inline-block; <- 이 문법을쓰면 적용이 되어서 블록들을 나란히 출력할수 있다
+    단점:  반응형 디자인 적용이 되지 않아서 모니터마다 넓이가 다 달라져서 추천x
+    (각 기기마다 만족하는 최적값을 일일히 찾아야 한다)
+
+2. flexbox 규칙 2가지
+
+2-1 부모 엘리먼트에 명시해야한다  display : flex 로 설정한다
+    flex container의 자식은 그 자체가 flex container가 될 수 있다. 
+
+2-2  주축 (main axis)과 교차축 (cross axis)
+    설명:
+    Flex Container는 두개의 축을 가지고 있다 이것이 main axis와 cross axis이다.
+    justify-content 는 주축 즉 평행(디폴트값이다)으로 움직이고 (main axis를 움직임)
+    align-items는 교차축 (디폴트는 수직)으로 움직인다. (cross axis를 움직임)
+    
+    설정 방법:
+    justify-content: space-between; <- 주축 설정
+    align-items: center; <- 교차축 설정
+    heigth: 100vh <- vh는 viewport height로 동적으로 맞춰준다 100%라는 의미
+
+    주축과 교차축을 반대로 적용:
+    flex-direction: column  <- 주축과 교차축이 뒤집힘
+    flex-direction: column-reverse <- 방향도 뒤집히고 순서도 뒤집힘
+
+    wrapping:
+    디스플레이가 줄어 들었을때 block들의 형태 변환 형식
+    flex-wrap: nowrap; -> 뭉개짐, 기본형태임
+    flex-wrap: wrap; -> 지정한 너비 유지, 뭉개지지 않고 순서대로 밑으로 쌓임
+    flex-wrap: wrap-reverse; -> 좁아질 때 순서 반대로 쌓임
+
+3. position: fixed; 
+    
+    설명:
+    position fixed는 해당 block이 화면을 따라다니는 기능을 가진다
+    해당 block의  top, left, right, bottem 하나만 수정하면 해당block가
+    가장 위 레이아웃에 존재하게 되어서 다른 block를 무시한다
+
+    예: 
+    position: fixed;
+    top: 30px;
+
+4. position: relative;
+
+    설명:
+    position relative는 처음 위치한 레이아웃 기준에서 조금씩만 움직이고 싶을때 쓴다
+
+    예:
+    position: relative;
+    top: -10px;   <-  현재위치한 위치에서부터 위로 10 움직인다는 뜻이다.
+
+5. position: absolute;
+
+    설명:
+    가장 가까운 relative 부모를 기준으로 이동을 시키는것일 말한다 (부모가 position: relative;
+    설정을 해야 부모기준으로 움직이고 없을경우 body를 기준으로 움직인다.)
+
+    예:
+    position: absolute;
+    top: 0px;   <-  현재위치 기준이 아닌 부모를 기준으로 움직인다 
+
+6. combinator  
+
+6-1 바로 밑 모든 자식
+    div span {
+    text-decoration : underline;
+    }
+    이렇게하면 div밑에 있는 모든 span이 효과를 가진다
+    직접적인 부모가 아니어도 밑에있는 것들을 모두 css가 찾는다.
+
+6-2  바로 밑 하나의 자식
+    div > span {
+    text-decoration : underline;
+    }
+    이렇게하면 바로 밑!!! 을 찾게 되므로 바로 밑의 자식만 건들일수있게된다.
+
+    형제에게 효과를 주는방법
+
+6-3 형제들 한테 
+    p + span {
+    color: black;
+
+    }
+    + 를 사용하면 형제에게 영향을 끼칠 수 있다. cool
+
+요약
+    ※ > 를 사용하면 direct child를 찾고, + 를 사용하면 바로 코드상 밑에 있는 sibling을 찾게된다.
+
+7. transition
+
+    애니메이션을 넣고 싶을때 사용하는 문법이다  
+    트랜지션은 항상 그 태그가 처음 생긴곳에 있어야한다
+    예: transition: all 5s ease-in-out;
+    Transition : (대상 선택,all가능) /(시간s단위)/(애니매이션 효과 선택)
+
+8. transformation
+
+    Transformation 3D로 회전을 시키는 등 다양한 옵션들이 있음
+    3D 이미지이므로 margin, padding 등이 적용되지 않음 (다른 요소에 영향을 미치지 않고 이동 가능)
+    다른 pixel 차원에서 일어난다고 생각하면 됨. 여러개 조합 가능 (transition, transform)
+    ex) transition: transform 5s ease-in-out
+    예 : transform: 효과(값);  / transform mdn에 가면 많은 애니메이션이 있따
+
+9. 애니메이션 
+    @keyframes 애니메이션 이름 {
+    from{ 
+        초기옵션 값 
+    }
+    to {
+        마지막 옵션 값
+    }
+    }
+    img {
+    animation : 애니메이션/이름/시간/옵션 무한:infinite
+    }
+    
+10. media queries : css를 이용해 사용자 스크린 사이즈를 안다
+     
+     @media screen and (max-width: 600px) and (orientation: landscape) {
+        div {
+          background-color: violet;
+        }
+      }
+      반응형 웹을 만드는 문이다 최대사이즈 600이고 가로모드일때 색을 바이올렛으로바꾼다는 뜻
+
+
+
+
+
+
